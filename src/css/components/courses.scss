@@ -1,0 +1,117 @@
+@import "../variable.scss";
+@import "../components/button.scss";
+
+
+.courses {
+margin-top: 11.25rem;
+  &__info {
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $createxTitle;
+  }
+
+  &-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.938rem 0 3.75rem 0;
+    &__text {
+      font-weight: 900;
+      font-size: 46px;
+      color: $createxTitle;
+    }
+    &__btn {
+    background: transparent;
+      border: 1px solid $secondColorBtn;
+      color: $secondColorBtn;
+
+    }
+  }
+
+  &-mentors {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 28px;
+
+    @media  all and (max-width: 1200px) {
+      justify-content: center;
+    }
+    &-left {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      .mentors-left-section {
+        display: flex;
+        @media  all and (max-width: 1200px) {
+          width: 100%;
+        }
+
+        &-r {
+          max-width: 386px;
+          width: 100%;
+          border: 1px solid #E5E8ED;
+          box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+          border-radius: 4px;
+          border-left: 0px;
+          padding: 32px;
+          h5 {
+            display: inline-block;
+            font-weight: 400;
+            font-size: 14px;
+            color: #FFFFFF;
+            background: $marketing;
+            padding: 2px 8px;
+            border-radius: 4px;
+          }
+
+          h3 {
+            max-width: 322px;
+            width: 100%;
+            font-weight: 700;
+            font-size: 20px;
+            color: $createxTitle;
+            margin: 20px 0;
+
+            @media  all and (max-width: 390px) {
+              font-size: 30px;
+            }
+          ;
+          }
+
+          &-price {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+
+            small {
+              font-weight: 700;
+              font-size: 18px;
+              color: #FF4242;
+              @media  all and (max-width: 390px) {
+                font-size: 25px;
+              }
+            }
+            span {
+              width: 1.5px;
+              height: 14px;
+              background: #787A80;
+
+            }
+            p {
+              font-weight: 400;
+              font-size: 18px;
+              color: #787A80;
+              @media  all and (max-width: 390px) {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

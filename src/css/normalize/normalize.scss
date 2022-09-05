@@ -1,0 +1,71 @@
+@import "../variable.scss";
+@import "../media/media.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: $mainSize;
+  font-family: $mainFont;
+}
+
+// Псевдо-элементы
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+}
+
+// Заголовки
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+// Списки
+ul,
+li {
+  list-style: none;
+}
+
+// Ссылки
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// Кнопки
+button {
+  font-family: $mainFont;
+  border: none;
+  cursor: pointer;
+}
+
+// Контейнер
+.container {
+  max-width: $width;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (max-width: 1300px) {
+    padding: 0 30px;
+  }
+  @media (max-width: $lg) {
+    padding: 0 25px;
+  }
+  @media (max-width: $md) {
+    padding: 0 25px;
+    margin: 0;
+  }
+}
+
+html {
+  @media (max-width: $md) {
+    width: $md + 10px;
+  }
+}

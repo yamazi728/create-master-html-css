@@ -1,0 +1,273 @@
+@import "../variable.scss";
+@import "./button.scss";
+.burger-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  display: none;
+  .nav-burger {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    background: grey;
+    width: 30%;
+    height: 100%;
+  }
+  .b-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    gap: 30px;
+    margin-top: 50%;
+    &__item {
+      a {
+        font-size: 25px;
+      }
+    }
+  }
+}
+.active-burger {
+  display: flex !important;
+}
+
+.header {
+  padding-top: 1.25rem;
+  padding-bottom: 4rem;
+  &-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 140px;
+    &__left {
+      display: flex;
+      align-items: center;
+      .header-link {
+        margin-right: 3.75rem;
+
+        @media (max-width: 1075px) {
+          margin-right: 2rem;
+        }
+        @media (max-width: $lg) {
+          margin-right: 1.5rem;
+        }
+      }
+      .header-list {
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+
+        &__item {
+          .nav__link {
+            font-weight: 700;
+            color: $mainColor;
+          }
+        }
+
+        @media (max-width: 1075px) {
+          gap: 1.25rem;
+        }
+        @media (max-width: $lg) {
+          gap: 1rem;
+        }
+        @media (max-width: $md) {
+          display: none;
+        }
+      }
+    }
+    &-center {
+      position: absolute;
+      left: 93%;
+      padding: 35px 25px;
+      &__burger {
+        position: relative;
+        width: 34px;
+        height: 3px;
+        background: $btn;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 6px;
+          width: 34px;
+          height: 3px;
+          background: $btn;
+          cursor: pointer;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 6px;
+          width: 34px;
+          height: 3px;
+          background: $btn;
+        }
+      }
+
+      @media (min-width: $md) {
+        // display: none;
+      }
+      @media (max-width: $sm) {
+        left: 70%;
+      }
+    }
+    &__right {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+    }
+
+    @media (max-width: $xxl) {
+      margin-bottom: 50px;
+    }
+    @media (max-width: $xxl) {
+      margin-bottom: 40px;
+    }
+  }
+  .main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 189px;
+
+    &__left {
+      .play-btn {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-bottom: 24px;
+        .circle {
+          width: 84px;
+          height: 84px;
+          background: $btn;
+          opacity: 0.1;
+          border-radius: 50%;
+        }
+        .lil-circle {
+          position: absolute;
+          top: 15px;
+          left: 15px;
+          background: $btn;
+          width: 52px;
+          height: 52px;
+          border-radius: 50%;
+          z-index: 99;
+          .triangle {
+            border: 10px solid transparent;
+            border-left: 10px solid white;
+            border-radius: 4px;
+            position: absolute;
+            top: 15px;
+            left: 22px;
+          }
+        }
+        span {
+          font-family: "Lato";
+          font-weight: 900;
+          font-size: 14px;
+          color: $white;
+        }
+
+        @media (max-width: $lg) {
+          margin-bottom: 16px;
+        }
+      }
+      max-width: 496px;
+      width: 100%;
+      .main-content__btns {
+        display: flex;
+        gap: 24px;
+        .empty-btn {
+          color: #ff3f3a;
+          background: none;
+          border: 1px solid;
+        }
+      }
+    }
+    h1 {
+      font-family: "Lato";
+      font-weight: 900;
+      font-size: 4rem;
+      letter-spacing: 1px;
+      color: $white;
+      margin-bottom: 60px;
+
+      @media (max-width: $xl) {
+        font-size: 3.5rem;
+        margin-bottom: 50px;
+      }
+      @media (max-width: 1030px) {
+        font-size: 3rem;
+        margin-bottom: 40px;
+      }
+      @media (max-width: $md) {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+      }
+    }
+    &__right img {
+      width: 602px;
+
+      @media (max-width: $xl) {
+        width: 555px;
+      }
+      @media (max-width: $lg) {
+        width: 500px;
+      }
+      @media (max-width: $md) {
+        width: 400px;
+      }
+    }
+
+    @media (max-width: $xxl) {
+      margin-bottom: 95px;
+    }
+    @media (max-width: $md) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__items {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      h2 {
+        font-family: "Lato";
+        font-weight: 900;
+        font-size: 46px;
+        color: $white;
+
+        @media (max-width: $md) {
+          font-size: 2rem;
+        }
+      }
+      span {
+        font-family: "Lato";
+        font-weight: 400;
+        font-size: 16px;
+        color: $white;
+
+        @media (max-width: $md) {
+          font-size: 14px;
+          width: 70px;
+        }
+      }
+    }
+    &__circle {
+      width: 8px;
+      height: 8px;
+      background: $btn;
+      border-radius: 50%;
+    }
+  }
+
+  @media (max-width: $xl) {
+    padding-bottom: 3rem;
+  }
+  @media (max-width: $md) {
+    padding-bottom: 2rem;
+  }
+}

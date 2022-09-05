@@ -1,0 +1,142 @@
+@import "../variable.scss";
+@import "./button.scss";
+
+.createx {
+    margin-top: 11.25rem;
+    position: relative;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url(../../public/assets/images/svg/dots.svg);
+      background-repeat: no-repeat;
+      top: 0;
+      width: 191px;
+      height: 132px;
+  
+      @media (max-width: 1350px) {
+        left: -60px;
+      }
+    }
+  
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url(../../public/assets/images/svg/circles.svg);
+      background-repeat: no-repeat;
+      top: 250px;
+      right: 0px;
+      width: 90px;
+      height: 287px;
+
+      @media (max-width: $md) {
+        top: 150px;
+      }
+    }
+  
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .createx-left {
+        background-image: url(../../public/assets/images/jpg/user.png);
+        height: 560px;
+        width: 705px / $width * 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @media (max-width: $lg) {
+          width: 570px / $width * 100%;
+        }
+        @media (max-width: $md) {
+          width: 530px / $width * 100%;
+          height: 400px;
+        }
+      }
+  
+      .createx-right {
+        &-header {
+          h4 {
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.063;
+            text-transform: uppercase;
+            color: $createxTitle;
+
+            @media all and (mmax-width: 1000px) {
+              font-size: 200px;
+            }
+            @media (max-width: $lg) {
+              font-size: 0.875rem;
+            }
+            @media (max-width: $md) {
+              font-size: 0.75rem;
+            }
+          }
+          h2 {
+            font-weight: 900;
+            font-size: 2.875rem;
+            color: $createxTitle;
+            margin: 0.5rem 0 1.875rem 0;
+            &__circle {
+              font-size: 2rem;
+            }
+
+            @media (max-width: $lg) {
+              font-size: 2.5rem;
+            }
+            @media (max-width: $md) {
+              font-size: 2.1rem;
+            }
+          }
+        }
+        &-list {
+          max-width: 386px;
+          width: 100%;
+          margin-bottom: 1.375rem;
+  
+          &__item {
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 160%;
+            color: $white;
+            margin-bottom: 0.75rem;
+            position: relative;
+  
+            &::before {
+              content: "";
+              position: absolute;
+              top: 6px;
+              left: -25px;
+              background-image: url(../../public/assets/images/svg/check.svg);
+              background-repeat: no-repeat;
+              background-size: cover;
+              width: 16px;
+              height: 16px;
+            }
+  
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            @media (max-width: $md) {
+              font-size: 0.875rem;
+            }
+          }
+
+          @media (max-width: $md) {
+            max-width: 320px;
+          }
+        }
+      }
+    }
+
+    @media (max-width: $xl) {
+      margin-top: 7.5rem;
+    };
+    @media (max-width: $lg) {
+      margin-top: 3.75rem;
+    }
+  }
+  

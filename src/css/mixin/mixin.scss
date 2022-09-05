@@ -1,0 +1,12 @@
+@mixin btn-mx($n, $spacing){
+    padding: 1.25rem 2.5rem;
+    border-radius:$n;
+    background: $btn;
+    letter-spacing: $spacing;
+    font-weight: 700;
+    color: $white;
+  }
+
+@mixin  profColor($n) {
+    background: $n;
+}

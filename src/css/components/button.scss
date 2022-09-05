@@ -1,0 +1,19 @@
+@import "../variable.scss";
+@import '../mixin/mixin.scss';
+@import '../media/media.scss';
+
+
+
+.btn {
+  @include btn-mx(4px, 0.5px);
+  
+  @media (max-width: $xl) {
+    padding: 0.938rem 1.875rem;
+  }
+  @media (max-width: $lg) {
+    padding: 0.938rem 1.25rem;
+  }
+  @media (max-width: $md) {
+    padding: 0.875rem 1rem;
+  }
+}

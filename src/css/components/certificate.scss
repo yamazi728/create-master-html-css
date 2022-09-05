@@ -1,0 +1,61 @@
+@import "../variable.scss";
+@import "../components/button.scss";
+
+.certificate {
+    display: flex;
+    margin-top: 110px;
+    &__left {
+        @media (max-width: 1092px) {
+            margin-right: 80px;
+        }
+        @media (max-width: 902px) {
+            margin-right: 50px;
+        }
+        h4 {
+            font-weight: 700;
+            color: $createxTitle;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        h2 {
+            max-width: 392px;
+            font-weight: 900;
+            font-size: 46px;
+            color: $createxTitle;
+            margin-bottom: 48px;
+            @media (max-width: 1010px) {
+                font-size: 33px;
+            }
+            @media (max-width: 1010px) {
+                margin-bottom: 25px;
+            }
+        }
+        p {
+            color: $mainColor;
+            width: 390px;
+            margin-bottom: 32px;
+        }
+        &-logo {
+            display: inline-flex;
+            gap: 40px;
+        }
+
+    }
+    &__right {
+        display: flex;
+        position: absolute;
+        img {
+            width: 705px;
+            height: 500px;
+            position: absolute;
+            left: 600px;
+            z-index: 99999;
+            @media (max-width: 1316px) {
+                width: 500px;
+            }
+            @media (max-width: 1010px) {
+                width: 400px;
+            }
+        }
+    }
+}
